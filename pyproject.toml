@@ -71,6 +71,9 @@ gpu = [
   # metadata (tilelang==0.1.9, apache-tvm-ffi==0.1.9) already matches the pins
   # below, so it needs no source build and no dependency-metadata override.
   "flash-qla==0.1.2",
+  # Optional backend for the torchao FP4 QAT rows. Pinned because the rows use
+  # torchao's MXTensor / NVFP4Tensor round trips, which change between releases.
+  "torchao==0.18.0",
   "liger-kernel",
   "flash-linear-attention",
   "quack-kernels[cu13]==0.5.0",
